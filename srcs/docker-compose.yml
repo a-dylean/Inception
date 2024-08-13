@@ -15,49 +15,52 @@ services:
     #   - docker_network
   #   restart: always
 
-  # wordpress:
-  #   environment: 
-  #     - MYSQL_DATABASE=${MYSQL_DATABASE}
-  #     - MYSQL_USER=${MYSQL_USER}
-  #     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-  #     - MYSQL_HOSTNAME=${MYSQL_HOSTNAME}
-  #   container_name: wordpress
-  #   build: requirements/wordpress
-  #   image: wordpress:v_final
-  #   depends_on: 
-  #     - mariadb
-  #   networks:
-  #     - docker_network
-  #   volumes:
-  #     - wordpress_data:/var/www/html/wordpress
-  #   restart: always
+  wordpress:
+    environment:
+      - WORDPRESS_DB_NAME=wpdb
+      - WORDPRESS_TABLE_PREFIX=wp_
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_PASSWORD=aqwe123
+    container_name: wordpress
+    # build: requirements/wordpress
+    image: wordpress:4.7.1-php7.0-fpm
+    # depends_on: 
+    #   - mariadb
+    networks:
+      - docker_network
+    ports:
+      - 9000
+    volumes:
+      - ./wordpress:/var/www/html/wordpress
+    restart: always
 
   nginx:
     container_name: nginx
     build: requirements/nginx
     # depends_on :
     #   - wordpress
-    # networks:
-    #   - docker_network
+    networks:
+      - docker_network
     ports:
       - "443:443"
-    # volumes:
-    #   - wordpress_data:/var/www/html/wordpress
+    volumes:
+      - ./wordpress:/var/www/html
+      # - ./ssl:/etc/nginx/ssl
     restart: always
 
-# networks:
-#   docker_network:
+networks:
+  docker_network:
 
-# volumes:
-#   db_data: 
-#     driver: local
-#     driver_opts:
-#       type: none
-#       device: /home/llescure/data/mysql
-#       o: bind
-#   wordpress_data:
-#     driver: local
-#     driver_opts:
-#       type: none
-#       device: /home/llescure/data/wordpress
-#       o: bind
+volumes:
+  db_data: 
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/atonkopi/data/mysql
+      o: bind
+  wordpress_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/atonkopi/data/wordpress
+      o: bind
