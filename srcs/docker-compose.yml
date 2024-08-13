@@ -22,8 +22,8 @@ services:
       - WORDPRESS_DB_HOST=mysql
       - WORDPRESS_DB_PASSWORD=aqwe123
     container_name: wordpress
-    # build: requirements/wordpress
-    image: wordpress:4.7.1-php7.0-fpm
+    build: requirements/wordpress
+    # image: wordpress:4.7.1-php7.0-fpm
     # depends_on: 
     #   - mariadb
     networks:
@@ -45,7 +45,7 @@ services:
       - "443:443"
     volumes:
       - ./wordpress:/var/www/html
-      - ./requirements/nginx/conf/ssl:/etc/nginx/ssl
+      - ./requirements/nginx/ssl:/etc/nginx/ssl
     restart: always
 
 networks:

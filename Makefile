@@ -1,6 +1,6 @@
 ssl:
-	mkdir -p srcs/requirements/nginx/conf/ssl
-	(cd srcs/requirements/nginx/conf && openssl req -x509 -nodes -out ssl/atonkopi.42.fr.crt -keyout ssl/atonkopi.42.fr.key -subj "/C=FR/ST=Paris/L=Paris/O=42 School/OU=atonkopi/CN=atonkopi.42.fr")
+	mkdir -p srcs/requirements/nginx/ssl
+	(cd srcs/requirements/nginx/ && openssl req -x509 -nodes -out ssl/atonkopi.42.fr.crt -keyout ssl/atonkopi.42.fr.key -subj "/C=FR/ST=Paris/L=Paris/O=42 School/OU=atonkopi/CN=atonkopi.42.fr")
 
 all: ssl
 	docker-compose -f srcs/docker-compose.yml build
