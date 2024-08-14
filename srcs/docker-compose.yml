@@ -16,11 +16,6 @@ services:
   #   restart: always
 
   wordpress:
-    environment:
-      - WORDPRESS_DB_NAME=wpdb
-      - WORDPRESS_TABLE_PREFIX=wp_
-      - WORDPRESS_DB_HOST=mysql
-      - WORDPRESS_DB_PASSWORD=aqwe123
     container_name: wordpress
     build: requirements/wordpress
     # image: wordpress:4.7.1-php7.0-fpm

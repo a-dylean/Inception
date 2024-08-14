@@ -8,7 +8,6 @@ RUN apt update && \
     wget \
     unzip && \
     rm -rf /var/lib/apt/lists/*
- 
 WORKDIR /var/www
 # Download and install WordPress.
 RUN wget https://wordpress.org/latest.zip && \
