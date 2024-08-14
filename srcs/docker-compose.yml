@@ -37,8 +37,8 @@ services:
   nginx:
     container_name: nginx
     build: requirements/nginx
-    # depends_on :
-    #   - wordpress
+    depends_on :
+      - wordpress
     networks:
       - docker_network
     ports:
