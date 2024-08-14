@@ -1,17 +1,12 @@
 FROM debian:11
 
-# ARG PHP_VERSION=8.2 \
-#     DB_NAME \
-#     DB_USER \
-#     DB_PASS
-
-    RUN apt update && \
+RUN apt update && \
     apt install -y \
-        php-fpm \
-        php-mysqli \
-        curl \
-        wget \
-        unzip && \
+    php-fpm \
+    php-mysqli \
+    curl \
+    wget \
+    unzip && \
     rm -rf /var/lib/apt/lists/*
  
 WORKDIR /var/www
@@ -22,6 +17,7 @@ RUN wget https://wordpress.org/latest.zip && \
     rm -rf wordpress latest.zip
 
 COPY conf/wp-config-create.sh .
+
 RUN sh wp-config-create.sh && rm wp-config-create.sh && \
         chmod -R 0777 wp-content/
     
