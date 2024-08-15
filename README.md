@@ -19,6 +19,8 @@
 
 ***MariaDB***
 1. Creating custom image: https://mariadb.com/kb/en/creating-a-custom-container-image/
+2. Create database: https://mariadb.com/kb/en/create-database/
+3. Create user: https://mariadb.com/kb/en/create-user/
 
 ***OpenSSL***
 1. Doc: https://docs.openssl.org/master/man1/openssl-req/#options
