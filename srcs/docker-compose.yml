@@ -1,19 +1,15 @@
 services:
 
-  # mariadb:
-  #   environment:
-  #     - MYSQL_DATABASE=${MYSQL_DATABASE}
-  #     - MYSQL_USER=${MYSQL_USER}
-  #     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-  #     - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-  #   container_name: mariadb
-  #   build: requirements/mariadb
-  #   image: mariadb:v_final
-  #   volumes:
-  #     - db_data:/var/lib/mysql
-    # networks:
-    #   - docker_network
-  #   restart: always
+  mariadb:
+    container_name: mariadb
+    build: requirements/mariadb
+    # image: mariadb:v_final
+    networks:
+      - docker_network
+    env_file: .env
+    restart: always
+    volumes:
+      - ./db:/var/lib/mysql
 
   wordpress:
     container_name: wordpress
@@ -47,7 +43,7 @@ networks:
   docker_network:
 
 volumes:
-  db_data: 
+  db: 
     driver: local
     driver_opts:
       type: none
