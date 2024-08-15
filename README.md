@@ -26,12 +26,17 @@
 **Commands**
 
 ***Docker***
+
 ```docker compose up --build -d```
 
 ***MySQL***
+
 ```docker exec -it mariadb bash```
+
 ```mysql -h localhost -p 3306 -u atonkopi```
+
 ```mysql -u root -p```
 
 ***Other***
+
 ```sudo rm -rf db/*```
