@@ -22,4 +22,16 @@
 
 ***OpenSSL***
 1. Doc: https://docs.openssl.org/master/man1/openssl-req/#options
-2. 
+
+**Commands**
+
+***Docker***
+```docker compose up --build -d```
+
+***MySQL***
+```docker exec -it mariadb bash```
+```mysql -h localhost -p 3306 -u atonkopi```
+```mysql -u root -p```
+
+***Other***
+```sudo rm -rf db/*```

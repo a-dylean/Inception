@@ -3,20 +3,19 @@ services:
   mariadb:
     container_name: mariadb
     build: requirements/mariadb
-    # image: mariadb:v_final
     networks:
       - docker_network
-    env_file: .env
     restart: always
+    ports:
+      - 3600:3600
     volumes:
       - ./db:/var/lib/mysql
 
   wordpress:
     container_name: wordpress
     build: requirements/wordpress
-    # image: wordpress:4.7.1-php7.0-fpm
-    # depends_on: 
-    #   - mariadb
+    depends_on: 
+      - mariadb
     networks:
       - docker_network
     ports:

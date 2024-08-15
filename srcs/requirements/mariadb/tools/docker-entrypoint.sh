@@ -12,8 +12,11 @@ else
     echo "Initializing MariaDB database..."
     mariadb-install-db --user=mysql
     sed -i '/^bind-address*/ s/^/#/' /etc/mysql/my.cnf
-    
     echo "MariaDB initialization completed."
     echo "Starting MariaDB..."
-    mariadbd-safe
+    mariadbd-safe &
+    echo "Waiting for MariaDB to start..."
+    sleep 5
+    echo "Boostrapping DB..."
+    mysql < ./createdb.sql
 fi

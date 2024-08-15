@@ -1,12 +1,6 @@
-CREATE DATABASE wordpress;
+CREATE DATABASE db;
 CREATE USER 'atonkopi'@'%' IDENTIFIED BY '123123';
--- Для GRANT ALL привилегий для atonkopi, предоставляющих этому пользователю полный контроль над database wordpress
--- Эти привилегии предназначены для wordpress применяются ко всем таблицам этой базы данных, 
--- что обозначено .*следующим образом
-GRANT ALL PRIVILEGES ON wordpress.* TO 'atonkopi'@'%';
--- Сохранение ваших изменений
+GRANT ALL PRIVILEGES ON db.* TO 'atonkopi'@'%';
 FLUSH PRIVILEGES;
 
--- Чтобы изменить аутентификацию или характеристики ресурса базы данных пользователя базы данных
--- Чтобы разрешить прокси-серверу подключаться в качестве клиента без аутентификации
-ALTER USER 'root'@'localhost' IDENTIFIED BY '123123';
+ALTER USER 'root'@'localhost' IDENTIFIED BY '12312345';
