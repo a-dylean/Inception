@@ -34,11 +34,13 @@
 
 ***MySQL***
 
-```docker exec -it mariadb bash```
+Run the container and open bash: ```docker exec -it mariadb bash```
 
 ```mysql -h localhost -p 3306 -u atonkopi```
 
 ```mysql -u root -p```
+
+Connect to db on port 3306 with atonkopi user via TCP: ```mysql -P 3306 -u atonkopi -p --protocol=TCP```
 
 ***Other***
 
