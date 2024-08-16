@@ -1,2 +1,5 @@
 srcs/requirements/nginx/ssl
 srcs/db
+secrets/*
+*.env
+wordpress

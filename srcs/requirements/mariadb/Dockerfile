@@ -9,8 +9,6 @@ RUN		apt update && \
 RUN mkdir -p /run/mysqld; \
 	chmod 777 /run/mysqld;
 
-# COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
-
 COPY ./tools/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY ./tools/createdb.sql /
 

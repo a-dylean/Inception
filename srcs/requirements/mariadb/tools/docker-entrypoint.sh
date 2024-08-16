@@ -6,7 +6,7 @@ DIR="/var/lib/mysql/mysql"
 # Check if the directory exists
 if [ -d "$DIR" ]; then
     echo "Starting MariaDB..."
-    mariadbd-safe
+    mariadbd-safe --default-authentication-plugin=mysql_native_password --port=3306 --bind-address=0.0.0.0
 else
     echo "$DIR does not exist."
     echo "Initializing MariaDB database..."
@@ -14,7 +14,7 @@ else
     sed -i '/^bind-address*/ s/^/#/' /etc/mysql/my.cnf
     echo "MariaDB initialization completed."
     echo "Starting MariaDB..."
-    mariadbd-safe &
+    mariadbd-safe --default-authentication-plugin=mysql_native_password --port=3306 --bind-address=0.0.0.0 &
     echo "Waiting for MariaDB to start..."
     sleep 5
     echo "Boostrapping DB..."

@@ -4,10 +4,11 @@
 1. Debian releases: https://www.debian.org/releases/
 
 ***NGINX***
-1. NGINX official documentation: https://nginx.org/en/docs/
-2. Installation for Debian: https://nginx.org/en/linux_packages.html#Debian
-3. NGINX Guide: https://nginx.org/en/docs/beginners_guide.html
-4. Configuring HTTPS servers: Configuring HTTPS servers
+1. [NGINX official documentation](https://nginx.org/en/docs/)
+2. [Installation for Debian](https://nginx.org/en/linux_packages.html#Debian)
+3. [NGINX Guide](https://nginx.org/en/docs/beginners_guide.html)
+4. [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
+5. [Configure NGINX container with docker secrets](https://docs.docker.com/engine/swarm/secrets/) (search: Configure the Nginx container)
 
 ***WordPress***
 1. Installation: https://developer.wordpress.org/advanced-administration/before-install/howto-install/

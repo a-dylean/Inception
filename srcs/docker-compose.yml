@@ -7,7 +7,7 @@ services:
       - docker_network
     restart: always
     ports:
-      - 3600:3600
+      - "3306:3306"
     volumes:
       - ./db:/var/lib/mysql
 
@@ -18,8 +18,8 @@ services:
       - mariadb
     networks:
       - docker_network
-    ports:
-      - 9000
+    expose:
+      - "9000"
     volumes:
       - ./wordpress:/var/www/html/wordpress
     restart: always
@@ -40,17 +40,3 @@ services:
 
 networks:
   docker_network:
-
-volumes:
-  db: 
-    driver: local
-    driver_opts:
-      type: none
-      device: /home/atonkopi/data/mysql
-      o: bind
-  wordpress_data:
-    driver: local
-    driver_opts:
-      type: none
-      device: /home/atonkopi/data/wordpress
-      o: bind
