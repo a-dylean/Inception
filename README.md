@@ -45,3 +45,4 @@ Connect to db on port 3306 with atonkopi user via TCP: ```mysql -P 3306 -u atonk
 ***Other***
 
 ```sudo rm -rf db/*```
+Change localhost: ```sudo vim /etc/hosts```

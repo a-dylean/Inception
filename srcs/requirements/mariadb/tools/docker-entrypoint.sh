@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Directory to check
 DIR="/var/lib/mysql/mysql"
 
-# Check if the directory exists
 if [ -d "$DIR" ]; then
     echo "Starting MariaDB..."
     mariadbd-safe --bind-address=0.0.0.0
