@@ -6,14 +6,22 @@ services:
     networks:
       - docker_network
     restart: always
-    ports:
-      - "3306:3306"
     volumes:
       - ./db:/var/lib/mysql
 
   wordpress:
     container_name: wordpress
     build: requirements/wordpress
+    environment:
+      DB_HOST: mariadb
+      DB_NAME: db
+      DB_USER: atonkopi
+      DB_PASSWORD: 123123
+      WP_ADMIN_USER: atonkopi.root
+      WP_ADMIN_PASSWORD: 123123
+      WP_USER: atonkopi
+      WP_USER_EMAIL: atonkopi@example.org
+      WP_ADMIN_EMAIL: atonkopi.root@example.org
     depends_on: 
       - mariadb
     networks:
@@ -34,7 +42,7 @@ services:
     ports:
       - "443:443"
     volumes:
-      - ./wordpress:/var/www/html
+      - ./wordpress:/var/www/html/wordpress
       - ./requirements/nginx/ssl:/etc/nginx/ssl
     restart: always
 
