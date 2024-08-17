@@ -4,8 +4,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   wget \
   php-mysql \
   php-fpm \
-  mariadb-client \
-  zip \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /run/php/

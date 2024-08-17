@@ -16,7 +16,7 @@ ps:
 	docker-compose -f srcs/docker-compose.yml ps
 
 re:	down
-	docker-compose -f ./docker-compose.yml up -d --build
+	docker-compose -f srcs/docker-compose.yml up -d --build
 
 clean: down
 	docker system prune -a

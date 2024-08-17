@@ -10,10 +10,7 @@ RUN mkdir -p /run/mysqld; \
 	chmod 777 /run/mysqld;
 
 COPY ./tools/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-COPY ./tools/createdb.sql /
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-EXPOSE 3306
-
-CMD ["docker-entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
