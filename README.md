@@ -32,13 +32,13 @@
 
 ***Docker***
 
-```docker-compose -f srcs/docker-compose.yml up --build -d```
-```docker stop $(docker ps -qa)```
-```docker volumes ls```
-```docker image ls```
-```docker image inspect```
-```docker network inspect```
-```docker logs```
+- ```docker-compose -f srcs/docker-compose.yml up --build -d```
+- ```docker stop $(docker ps -qa)```
+- ```docker volumes ls```
+- ```docker image ls```
+- ```docker image inspect```
+- ```docker network inspect```
+- ```docker logs```
 
 ***MySQL***
 
@@ -51,4 +51,5 @@ Connect to db on port 3306 with atonkopi user via TCP: ```mysql -P 3306 -u atonk
 ***Other***
 
 ```wget http://127.0.0.1 ```
+
 Change localhost: ```sudo vim /etc/hosts```
