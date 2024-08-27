@@ -1,4 +1,4 @@
-**Resources**
+**Useful Resources for configuration of the project and evaluation**
 
 ***The Operating System***
 1. Debian releases: https://www.debian.org/releases/
@@ -42,14 +42,11 @@
 
 ***MySQL***
 
-Run the container and open bash: ```docker exec -it mariadb bash```
-
-Connect to the db as root: ```mysql -u root -p```
-
-Connect to db on port 3306 with atonkopi user via TCP: ```mysql -P 3306 -u atonkopi -p --protocol=TCP```
+- Run the container and open bash: ```docker exec -it mariadb bash```
+- Connect to the db as root: ```mysql -u root -p```
+- Connect to db on port 3306 with atonkopi user via TCP: ```mysql -P 3306 -u atonkopi -p --protocol=TCP```
 
 ***Other***
 
-```wget http://127.0.0.1 ```
-
-Change localhost: ```sudo vim /etc/hosts```
+- Check out connection: ```wget http://127.0.0.1 ```
+- Change localhost: ```sudo vim /etc/hosts```
