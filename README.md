@@ -34,7 +34,7 @@
 
 - ```docker-compose -f srcs/docker-compose.yml up --build -d```
 - ```docker stop $(docker ps -qa)```
-- ```docker volumes ls```
+- ```docker volume ls```
 - ```docker image ls```
 - ```docker image inspect```
 - ```docker network inspect```
