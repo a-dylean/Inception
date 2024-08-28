@@ -1,4 +1,4 @@
-**Resources**
+**Useful Resources for configuration of the project and evaluation**
 
 ***The Operating System***
 1. Debian releases: https://www.debian.org/releases/
@@ -12,6 +12,7 @@
 
 ***WordPress***
 1. Installation: https://developer.wordpress.org/advanced-administration/before-install/howto-install/
+2. Access WP-Admin: access WP-Admin by typing your website address in your browser’s address bar, followed by /wp-admin. For example: atonkopi.42.fr/wp-admin
 
 ***PHP***
 1. PHP Manual: https://www.php.net/manual/en/index.php
@@ -31,19 +32,21 @@
 
 ***Docker***
 
-```docker-compose -f srcs/docker-compose.yml up --build -d```
+- ```docker-compose -f srcs/docker-compose.yml up --build -d```
+- ```docker stop $(docker ps -qa)```
+- ```docker volumes ls```
+- ```docker image ls```
+- ```docker image inspect```
+- ```docker network inspect```
+- ```docker logs```
 
 ***MySQL***
 
-Run the container and open bash: ```docker exec -it mariadb bash```
-
-```mysql -h localhost -p 3306 -u atonkopi```
-
-```mysql -u root -p```
-
-Connect to db on port 3306 with atonkopi user via TCP: ```mysql -P 3306 -u atonkopi -p --protocol=TCP```
+- Run the container and open bash: ```docker exec -it mariadb bash```
+- Connect to the db as root: ```mysql -u root -p```
+- Connect to db on port 3306 with atonkopi user via TCP: ```mysql -P 3306 -u atonkopi -p --protocol=TCP```
 
 ***Other***
 
-```sudo rm -rf db/*```
-Change localhost: ```sudo vim /etc/hosts```
+- Check out connection: ```wget http://127.0.0.1 ```
+- Change localhost: ```sudo vim /etc/hosts```
