@@ -2,7 +2,7 @@ include srcs/.env
 
 ssl:
 	mkdir -p srcs/requirements/nginx/ssl
-	(cd srcs/requirements/nginx/ && openssl req -x509 -nodes -out ssl/${DB_USER}.42.fr.crt -keyout ssl/${DB_USER}.42.fr.key -subj "/C=FR/ST=Paris/L=Paris/O=42 School/OU=${DB_USER}/CN=${DB_USER}.42.fr")
+	(cd srcs/requirements/nginx/ && openssl req -x509 -nodes -out ssl/${USER}.42.fr.crt -keyout ssl/${USER}.42.fr.key -subj "/C=FR/ST=${LOCATION}/L=${LOCATION}/O=${ORGANISATION}/OU=${USER}/CN=${USER}.42.fr")
 
 all: ssl
 	docker-compose -f srcs/docker-compose.yml build
