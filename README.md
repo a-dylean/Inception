@@ -52,5 +52,5 @@
 
 ***Other***
 
-- Check out connection: ```wget http://127.0.0.1 ```
+- Check out connection: ```wget https://atonkopi.42.fr:443 --no-check-certificate```
 - Change localhost: ```sudo vim /etc/hosts```
