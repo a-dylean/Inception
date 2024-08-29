@@ -39,12 +39,16 @@
 - ```docker image inspect```
 - ```docker network inspect```
 - ```docker logs```
+- ```docker volume rm```
 
 ***MySQL***
 
 - Run the container and open bash: ```docker exec -it mariadb bash```
 - Connect to the db as root: ```mysql -u root -p```
 - Connect to db on port 3306 with atonkopi user via TCP: ```mysql -P 3306 -u atonkopi -p --protocol=TCP```
+- Show all databases: ```SHOW DATABASES;```
+- Show all tables from a database db: ```SHOW TABLES FROM db;```
+- Show all WP users: ```USE db; SELECT * FROM wp_users;```
 
 ***Other***
 
