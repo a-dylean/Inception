@@ -19,7 +19,7 @@ chmod -R 774 /var/www/html/wordpress
 chown -R www-data:www-data /var/www/html/wordpress
 
 if [ ! -f wp-config.php ] ; then
-	sleep 5
+	sleep 10
 	echo "Creating wp-config.php..."
 	wp config create \
 		--dbhost=$DB_HOST \
