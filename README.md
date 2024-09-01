@@ -45,21 +45,21 @@ make fclean
 5. [Configure NGINX container with docker secrets](https://docs.docker.com/engine/swarm/secrets/) (search: Configure the Nginx container)
 
 ***WordPress***
-1. Installation: https://developer.wordpress.org/advanced-administration/before-install/howto-install/
+1. [Installation](https://developer.wordpress.org/advanced-administration/before-install/howto-install/)
 2. Access WP-Admin: access WP-Admin by typing your website address in your browser’s address bar, followed by /wp-admin. For example: atonkopi.42.fr/wp-admin
 
 ***PHP***
-1. PHP Manual: https://www.php.net/manual/en/index.php
-2. FastCGI Process Manager (FPM): https://www.php.net/manual/en/install.fpm.php
-3. Required PHP modules for Wordpress: https://make.wordpress.org/hosting/handbook/server-environment/#php 
+1. [PHP Manual](https://www.php.net/manual/en/index.php)
+2. [FastCGI Process Manager (FPM)](https://www.php.net/manual/en/install.fpm.php)
+3. [Required PHP modules for Wordpress](https://make.wordpress.org/hosting/handbook/server-environment/#php)
 
 ***MariaDB***
-1. Creating custom image: https://mariadb.com/kb/en/creating-a-custom-container-image/
-2. Create database: https://mariadb.com/kb/en/create-database/
-3. Create user: https://mariadb.com/kb/en/create-user/
+1. [Creating custom image](https://mariadb.com/kb/en/creating-a-custom-container-image/)
+2. [Create database](https://mariadb.com/kb/en/create-database/)
+3. [Create user](https://mariadb.com/kb/en/create-user/)
 
 ***OpenSSL***
-1. Doc: https://docs.openssl.org/master/man1/openssl-req/#options
+1. [Doc](https://docs.openssl.org/master/man1/openssl-req/#options)
 
 **Commands**
 
