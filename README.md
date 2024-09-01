@@ -59,7 +59,7 @@ make fclean
 3. [Create user](https://mariadb.com/kb/en/create-user/)
 
 ***OpenSSL***
-1. [Doc](https://docs.openssl.org/master/man1/openssl-req/#options)
+1. [Documentation](https://docs.openssl.org/master/man1/openssl-req/#options)
 
 **Commands**
 
