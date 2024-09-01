@@ -3,3 +3,4 @@ srcs/db
 srcs/wordpress
 secrets/*
 *ssl*
+.env

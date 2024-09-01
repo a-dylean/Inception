@@ -7,15 +7,20 @@
 1. Create the .env file in ```srcs``` folder with the following variables:
 ```
 # SSL certificate requirements
+
 USER=
 LOCATION=
 ORGANISATION=
+
 # MariaDB(MySQL) database config
+
 DB_HOST=
 DB_NAME=
 DB_USER=
 DB_PASSWORD=
+
 # Wordpress config
+
 WP_ADMIN_USER=
 WP_ADMIN_PASSWORD=
 WP_USER=
