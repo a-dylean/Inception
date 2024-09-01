@@ -50,5 +50,19 @@ services:
       - ./requirements/nginx/ssl:/etc/nginx/ssl
     restart: always
 
+volumes:
+  wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/atonkopi/data/wordpress
+      o: bind
+  db:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/atonkopi/data/mysql
+      o: bind
+
 networks:
   docker_network:
