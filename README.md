@@ -1,5 +1,34 @@
-**Useful Resources for configuration of the project and evaluation**
+**Inception**
+---
+42 school project about setting up a small infrastructure composed of WordPress with LEMP Stack (Nginx, MariaDB and PHP) using Docker / Docker-Compose.
 
+**How to run the project**
+---
+1. Create the .env file in ```srcs``` folder with the following variables:
+```
+# SSL certificate requirements
+USER=
+LOCATION=
+ORGANISATION=
+# MySQL database config
+DB_HOST=
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+# Wordpress config
+WP_ADMIN_USER=
+WP_ADMIN_PASSWORD=
+WP_USER=
+WP_USER_EMAIL=
+WP_ADMIN_EMAIL=
+```
+2. Start the project with this command which will create SSL certificates, build the images and start the containers:
+```
+make all
+```
+
+**Useful Resources for configuration of the project and evaluation**
+---
 ***The Operating System***
 1. Debian releases: https://www.debian.org/releases/
 
