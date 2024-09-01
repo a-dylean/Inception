@@ -10,7 +10,7 @@
 USER=
 LOCATION=
 ORGANISATION=
-# MySQL database config
+# MariaDB(MySQL) database config
 DB_HOST=
 DB_NAME=
 DB_USER=
@@ -26,11 +26,16 @@ WP_ADMIN_EMAIL=
 ```
 make all
 ```
+3. To stop and remove containers, images, volumes and network:
+```
+make fclean
+```
 
-**Useful Resources for configuration of the project and evaluation**
+**Useful resources for configuration and evaluation of the project**
 ---
 ***The Operating System***
 1. Debian releases: https://www.debian.org/releases/
+2. FPM version for Debian: https://packages.debian.org/search?keywords=php-fpm
 
 ***NGINX***
 1. [NGINX official documentation](https://nginx.org/en/docs/)
@@ -47,7 +52,6 @@ make all
 1. PHP Manual: https://www.php.net/manual/en/index.php
 2. FastCGI Process Manager (FPM): https://www.php.net/manual/en/install.fpm.php
 3. Required PHP modules for Wordpress: https://make.wordpress.org/hosting/handbook/server-environment/#php 
-4. FPM version for Debian: https://packages.debian.org/search?keywords=php-fpm 
 
 ***MariaDB***
 1. Creating custom image: https://mariadb.com/kb/en/creating-a-custom-container-image/
